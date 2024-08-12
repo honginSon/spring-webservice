@@ -2,6 +2,7 @@ language: java
 jdk:
   - openjdk17
 
+# master 브랜치가 푸시될 때 CI 수행
 branches:
   only:
     - master
@@ -12,6 +13,7 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
+# 푸시될 때 수행하는 명령어
 script: "./gradlew clean build"
 
 # CI 실행 완료시 메일로 알람
